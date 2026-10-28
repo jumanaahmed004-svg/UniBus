@@ -1,0 +1,6 @@
+{
+  "files.associations": { "*.php": "php" },
+  "editor.tabSize": 4,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": { "database/*.sqlite": false }
+}

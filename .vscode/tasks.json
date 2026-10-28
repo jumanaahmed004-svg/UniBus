@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run UniBus",
+      "type": "shell",
+      "command": "php -S localhost:8000",
+      "windows": { "command": "if (Get-Command php -ErrorAction SilentlyContinue) { php -S localhost:8000 } else { C:\\xampp\\php\\php.exe -S localhost:8000 }" },
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    }
+  ]
+}

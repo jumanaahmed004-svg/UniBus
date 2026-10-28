@@ -1,0 +1,9 @@
+# Local database (re-created automatically from database/schema.sql)
+database/*.sqlite
+database/*.sqlite-journal
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+*.log
+.idea/
