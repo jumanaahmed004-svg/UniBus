@@ -1,9 +1,10 @@
 <p align="center">
-  <img src="assets/img/logo.jpg" alt="UniBus logo" width="220">
+  <img src="assets/img/logo.jpg" alt="UniBus logo" width="200">
 </p>
 
 <h1 align="center">UniBus</h1>
-<p align="center"><b>University Bus Booking System</b></p>
+<p align="center"><b>University Bus Booking System</b><br>
+University of Technology and Applied Sciences – Suhar Campus</p>
 
 <p align="center">
   <img alt="PHP" src="https://img.shields.io/badge/PHP-8.x-777BB4?logo=php&logoColor=white">
@@ -12,155 +13,228 @@
   <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black">
 </p>
 
-![UniBus home page](docs/screenshots/home.jpg)
+---
+
+## Contents
+
+- [About the Project](#about-the-project)
+- [Problem Statement](#problem-statement)
+- [Objectives](#objectives)
+- [The Solution](#the-solution)
+- [Users and Features](#users-and-features)
+- [System Requirements](#system-requirements)
+- [Technologies](#technologies)
+- [System Design](#system-design)
+- [Screenshots](#screenshots)
+- [Getting Started](#getting-started)
+- [Demo Accounts](#demo-accounts)
+- [Project Structure](#project-structure)
+- [Security](#security)
+- [Future Work](#future-work)
+- [Team](#team)
 
 ---
 
-## Table of Contents
+## About the Project
 
-1. [Overview](#1-overview)
-2. [Features](#2-features)
-3. [Technologies](#3-technologies)
-4. [Requirements](#4-requirements)
-5. [Installation and Setup](#5-installation-and-setup)
-6. [Running the Project in VS Code](#6-running-the-project-in-vs-code)
-7. [Demo Accounts](#7-demo-accounts)
-8. [How to Use](#8-how-to-use)
-9. [Project Structure](#9-project-structure)
-10. [Database](#10-database)
-11. [Configuration](#11-configuration)
-12. [Security](#12-security)
-13. [System Design](#13-system-design)
-14. [Screenshots](#14-screenshots)
-15. [Troubleshooting](#15-troubleshooting)
-16. [Team](#16-team)
+**UniBus** is a web-based information system for managing and improving university bus
+transportation. It gives students, lecturers and staff one simple place to check bus schedules
+and book seats on trips between their homes and the university.
+
+UniBus aims to reduce waiting times, prevent overcrowded buses and improve communication between
+passengers and the transportation department. Administrators manage trips, drivers and bookings
+from a dashboard, and drivers see exactly who to pick up and where.
+
+The system also supports the university's sustainability goals: shared transport means fewer
+private cars, less traffic around the campus and lower carbon emissions.
 
 ---
 
-## 1. Overview
+## Problem Statement
 
-**UniBus** is a web-based platform for managing university bus transportation at the
-University of Technology and Applied Sciences – Suhar Campus.
+University transportation is usually managed manually. Schedules are posted on notice boards,
+and there is no single platform for booking seats or receiving updates. This leads to:
 
-Students and staff use UniBus to view bus schedules, book seats online and manage their trips.
-Drivers see their assigned trips and the list of passengers to pick up, and administrators
-manage trips, drivers, bookings and user feedback from one dashboard.
+- **Overcrowded buses** and poor use of the available seats
+- **Delays and confusion** about trip times
+- **Weak communication** between students, drivers and the transport office
+- **Manual work** for staff to organise routes, drivers and passengers
 
-The goal of UniBus is to reduce waiting times and overcrowding, avoid manual booking errors, and
-improve communication between passengers and the transport office.
-
-The system has three user roles:
-
-| Role | Purpose |
-|---|---|
-| **Student / Staff** | Find trips, book seats, manage bookings and send feedback |
-| **Driver** | View assigned trips and the passenger list |
-| **Administrator** | Manage trips, drivers, administrators, bookings and feedback |
+UniBus solves these problems by moving the whole process online: seats are booked in advance,
+seat availability is always up to date, and every user sees the information they need.
 
 ---
 
-## 2. Features
+## Objectives
 
-### Students and staff
-- Create an account with a secure password and log in
+1. Provide comfortable and reliable university transport.
+2. Offer specialised services for students and staff.
+3. Manage user and driver data efficiently.
+4. Give users an easy way to send feedback and comments.
+5. Make booking and managing bus trips quick and simple.
+6. Help students easily find available transportation.
+7. Improve safety and organisation through better planning.
+
+---
+
+## The Solution
+
+UniBus is a user-friendly platform for transportation management and online booking:
+
+- Passengers **register once**, then browse upcoming trips and **book seats in three steps**:
+  choose a trip, enter the number of seats and the pickup location, and choose a payment method.
+- Each booking immediately **reduces the available seats**, so a bus can never be over-booked.
+- The **driver** receives a passenger list with names, phone numbers and pickup locations.
+- The **administrator** plans trips, assigns drivers and follows bookings and feedback through a
+  dashboard with live statistics.
+
+**Daily schedule**
+
+- **8:00 AM and 10:00 AM:** from home to the university
+- **12:00 PM, 2:00 PM, 4:00 PM and 6:00 PM:** from the university to home
+
+The service covers the areas around Suhar, including Sohar, Suwaiq, Liwa, Shinas and Al Khaboura.
+
+---
+
+## Users and Features
+
+### 🎓 Students and Staff
+- Create an account and log in securely
 - View upcoming trips with date, time, bus number, driver and free seats
 - Search trips by destination
-- Book 1–5 seats in three steps: choose trip → enter seats and pickup location → choose payment
+- Book up to 5 seats with an exact pickup location
 - Choose a payment method: cash on the bus or card
-- View booking history with driver contact details
-- Cancel an upcoming booking (seats are released automatically)
+- Receive a booking confirmation with the driver's contact number
+- View booking history and cancel upcoming bookings
 - Send feedback to the transport office
 
-### Drivers
+### 🚌 Drivers
 - Log in with full name and phone number
 - View today's, upcoming and past trips
-- See each passenger's name, phone number, number of seats and pickup location
+- See the passenger list for each trip: name, phone number, seats and pickup location
 
-### Administrators
-- Dashboard with statistics: upcoming trips, active bookings, registered users, revenue and seat occupancy
+### 🛡️ Administrators
+- Dashboard with statistics: upcoming trips, active bookings, registered users, revenue and seat occupancy per destination
 - Insert, update and delete trips, and assign a driver to each trip
-- View, search and filter all bookings
-- Read and remove user feedback
+- View and search all bookings
+- Read user feedback
 - Add, edit and remove drivers
 - Add and remove administrators, and change their own password
 
-### General
-- Responsive design for desktop, tablet and mobile
-- Booking rules: no booking of departed or full trips, and no duplicate bookings of the same trip
-- Seat counts are updated safely, so a trip can never be over-booked
+---
+
+## System Requirements
+
+### Functional requirements
+- **Registration and login:** secure accounts for students/staff, drivers and administrators
+- **Seat booking:** book and cancel seats, with live seat availability
+- **Bus schedule:** display trips with routes, dates and times
+- **Admin dashboard:** tools to plan trips and manage drivers, bookings and accounts
+- **Feedback system:** users can send comments and report problems
+
+### Non-functional requirements
+- **Usability:** a simple and clear interface for all users, on computers and phones
+- **Security:** protected user data, encrypted passwords and secure login
+- **Reliability:** consistent data, with seat updates that cannot conflict
+- **Performance:** fast page loading
+- **Scalability:** can grow to more routes, buses and campuses
+- **Maintainability:** organised code that is easy to update
 
 ---
 
-## 3. Technologies
+## Technologies
 
-| Layer | Technology |
+- **HTML5 and CSS3:** page structure and a responsive design for desktop and mobile
+- **JavaScript:** interactive features such as the mobile menu, live price and confirmations
+- **PHP 8:** server-side logic, user sessions and booking rules
+- **SQLite:** relational database stored in a single file and created automatically
+- **PDO (PHP Data Objects):** secure communication between PHP and the database
+- **Visual Studio Code:** development environment
+
+---
+
+## System Design
+
+### Architecture
+UniBus follows a **three-tier client–server architecture**:
+
+- **Client tier:** web pages in the browser for students/staff, drivers and administrators.
+- **Application tier:** PHP pages that handle requests, check permissions and apply the booking rules.
+- **Data tier:** the SQLite database that stores users, drivers, trips, bookings and feedback.
+
+<p align="center"><img src="docs/diagrams/architecture.png" alt="System architecture" width="780"></p>
+
+### Use case diagram
+Shows what each of the three actors (Student/Staff, Administrator and Driver) can do in the system.
+
+<p align="center"><img src="docs/diagrams/use_case.png" alt="Use case diagram" width="700"></p>
+
+### Database (ERD)
+The database has six tables:
+
+- **users:** students and staff
+- **admin:** administrator accounts
+- **drivers:** bus drivers
+- **trips:** trips with destination, date, time, bus, driver and seats
+- **booking:** bookings with seats, pickup location, payment and status
+- **feedback:** messages from users
+
+A user makes many bookings, and each trip has many bookings. A driver drives many trips,
+an administrator manages many trips, and a user can write many feedback messages.
+
+<p align="center"><img src="docs/diagrams/erd.png" alt="Entity relationship diagram" width="780"></p>
+
+More diagrams (context diagram, data flow diagram, booking flowchart and project schedule) are in
+[`docs/diagrams`](docs/diagrams).
+
+---
+
+## Screenshots
+
+| Available trips | Booking and payment |
 |---|---|
-| Front-end | HTML5, CSS3, JavaScript |
-| Back-end | PHP 8 |
-| Database | SQLite 3 (accessed through PHP PDO) |
-| Web server | PHP built-in development server |
-| Code editor | Visual Studio Code |
-| Font | Poppins (Google Fonts) |
-
-The system follows a three-tier architecture: the browser (client), the PHP application (server)
-and the SQLite database (data).
+| ![Trips](docs/screenshots/trips.jpg) | ![Booking](docs/screenshots/confirm.jpg) |
+| **Administrator dashboard** | **Driver – passenger list** |
+| ![Dashboard](docs/screenshots/dashboard.jpg) | ![Driver](docs/screenshots/driver_view.jpg) |
 
 ---
 
-## 4. Requirements
+## Getting Started
 
-| Software | Version | Purpose |
-|---|---|---|
-| **PHP** | 8.0 or newer | Runs the application and the web server |
-| PHP extension **pdo_sqlite** | included with PHP | Database access |
-| PHP extension **mbstring** | included with PHP | Text handling |
-| **Visual Studio Code** | latest | Opening, editing and running the project |
-| A web browser | Chrome, Edge, Firefox or Safari | Using the system |
+### Required software
+- **PHP 8** or newer, with the `pdo_sqlite` and `mbstring` extensions
+- **Visual Studio Code**
+- A web browser (Chrome, Edge, Firefox or Safari)
 
-No separate database server is required. The database is a single file that the application
-creates automatically.
-
----
-
-## 5. Installation and Setup
+No separate database server is needed.
 
 ### Step 1 – Install Visual Studio Code
-
-Download and install it from **https://code.visualstudio.com**.
+Download and install it from https://code.visualstudio.com.
 
 ### Step 2 – Install PHP
 
-**Windows**
-
-Open **PowerShell** and run:
-
+**Windows:** open PowerShell and run:
 ```powershell
 winget install PHP.PHP.8.3
 ```
-
-Close PowerShell and open it again, then check the installation:
-
+Close PowerShell, open it again and check the version:
 ```powershell
 php -v
 ```
 
-**macOS**
-
+**macOS:**
 ```bash
 brew install php
 ```
 
-**Linux (Ubuntu / Debian)**
-
+**Linux (Ubuntu / Debian):**
 ```bash
 sudo apt install php-cli php-sqlite3 php-mbstring
 ```
 
-### Step 3 – Enable the required PHP extensions (Windows only)
-
-On Windows, the `pdo_sqlite` and `mbstring` extensions must be switched on once.
-Paste the following into **PowerShell** and press Enter:
-
+### Step 3 – Enable the PHP extensions (Windows only)
+Paste this into PowerShell and press Enter:
 ```powershell
 $dir = Split-Path (php -r "echo PHP_BINARY;")
 if (!(Test-Path "$dir\php.ini")) { Copy-Item "$dir\php.ini-development" "$dir\php.ini" }
@@ -171,281 +245,80 @@ if (!(Test-Path "$dir\php.ini")) { Copy-Item "$dir\php.ini-development" "$dir\ph
   Set-Content "$dir\php.ini"
 php -m | Select-String "pdo_sqlite|mbstring"
 ```
+The result must show **mbstring** and **pdo_sqlite**.
 
-The output must show **`mbstring`** and **`pdo_sqlite`**.
-
-<details>
-<summary>Manual alternative</summary>
-
-1. Find the PHP folder by running `php -r "echo PHP_BINARY;"`.
-2. In that folder, copy `php.ini-development` and rename the copy to `php.ini`.
-3. Open `php.ini` and change these lines (remove the `;` at the start):
-   ```ini
-   extension_dir = "C:\full\path\to\php\ext"
-   extension=pdo_sqlite
-   extension=mbstring
-   ```
-4. Save the file and run `php -m` to confirm both extensions are listed.
-</details>
-
-### Step 4 – Get the project
-
-Extract the **UniBus** project folder to a location of your choice, for example `Documents\UniBus`.
-
----
-
-## 6. Running the Project in VS Code
-
-1. Open **Visual Studio Code**.
-2. Select **File → Open Folder…** and choose the `UniBus` folder.
-3. When VS Code suggests the recommended extensions (*PHP Intelephense*, *SQLite Viewer*), click **Install**.
-   They are optional but make editing easier.
-4. Open the terminal: **Terminal → New Terminal** (or press <kbd>Ctrl</kbd> + <kbd>`</kbd>).
-5. Start the server:
+### Step 4 – Open and run the project in VS Code
+1. Download or extract the **UniBus** project folder.
+2. Open VS Code and select **File → Open Folder…**, then choose the `UniBus` folder.
+3. Open the terminal: **Terminal → New Terminal**.
+4. Start the server:
    ```bash
    php -S localhost:8000
    ```
-   You can also press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> and choose **Run UniBus**.
-6. Open **http://localhost:8000** in your browser.
-7. To stop the server, click inside the terminal and press <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+5. Open **http://localhost:8000** in your browser.
+6. To stop the server, click in the terminal and press **Ctrl + C**.
 
-On the first visit, the database `database/unibus.sqlite` is created automatically with demo data.
-
-**Shortcut without VS Code:** double-click `start.bat` on Windows, or run `./start.sh` on macOS/Linux.
-
-### Editing the project
-
-Save a file (<kbd>Ctrl</kbd> + <kbd>S</kbd>) and refresh the browser to see the change.
-The server does not need to be restarted.
-
-| To change… | Edit |
-|---|---|
-| Colours, fonts and layout of all pages | `assets/css/style.css` |
-| Navigation menu, logo and footer | `includes/header.php`, `includes/footer.php` |
-| Contact email, seat price, seat limit | `includes/config.php` |
-| Tables or demo data | `database/schema.sql` (then reset the database, see [Database](#10-database)) |
+The database is created automatically with demo data on the first visit.
 
 ---
 
-## 7. Demo Accounts
+## Demo Accounts
 
-| Role | Login page | Username / Email | Password |
-|---|---|---|---|
-| Student | `/login.php` | `student@unibus.test` | `Student@123` |
-| Staff | `/login.php` | `staff@unibus.test` | `Staff@123` |
-| Administrator | `/admin_login.php` | `admin` | `Admin@123` |
-| Driver | `/driver_login.php` | `Salim Al-Balushi` | `95123456` |
+| Role | Login | Password |
+|---|---|---|
+| Student | `student@unibus.test` | `Student@123` |
+| Staff | `staff@unibus.test` | `Staff@123` |
+| Administrator | `admin` | `Admin@123` |
+| Driver | `Salim Al-Balushi` | `95123456` |
 
-<details>
-<summary>All driver accounts (name / phone number)</summary>
-
-| Name | Phone |
-|---|---|
-| Salim Al-Balushi | 95123456 |
-| Ahmed Al-Aufi | 95234567 |
-| Khalid Al-Maamari | 95345678 |
-| Maher Al-Hosni | 95456789 |
-| Nasser Al-Sheedi | 95567890 |
-| Fahad Al-Hinai | 95678901 |
-| Hamed Al-Rashdi | 95789012 |
-| Mansoor Al-Farsi | 95890123 |
-| Talib Al-Kiyumi | 95901234 |
-| Yousef Al-Saadi | 95012345 |
-</details>
+Drivers log in with their **full name** and their **phone number** as the password.
 
 ---
 
-## 8. How to Use
-
-### Booking a trip (student / staff)
-1. Log in, or create an account with **Create account**.
-2. Open **Trips** and pick a trip (use the search box or destination filters).
-3. Click **Book now**, enter the number of seats and your pickup location.
-4. Choose **Cash** or **Card** and click **Confirm booking**.
-5. The confirmation page shows the booking number and the driver's phone number.
-6. Open **My bookings** to see your trips or cancel an upcoming booking.
-
-### Managing the system (administrator)
-1. Log in at **Admin**.
-2. **Dashboard** shows statistics and shortcuts.
-3. **Trips**: insert, update or delete trips and assign drivers.
-4. **Bookings** and **Feedback**: monitor passengers and messages.
-5. **Drivers** and **Admins**: manage accounts.
-
-### Viewing trips (driver)
-1. Log in at **Driver** with full name and phone number.
-2. **My trips** lists upcoming trips with each passenger's pickup location and phone number.
-
-### Schedule
-| Time | Direction |
-|---|---|
-| 8:00 AM, 10:00 AM | Home → University |
-| 12:00 PM, 2:00 PM, 4:00 PM, 6:00 PM | University → Home |
-
----
-
-## 9. Project Structure
+## Project Structure
 
 ```
 UniBus/
-├── index.php               Home page
-├── login.php               Student / staff login
-├── register.php            Create account
-├── logout.php              Log out (all roles)
-│
-├── welcome.php             Student home page
-├── view_trip.php           Available trips and search      (booking step 1)
-├── booking.php             Seats and pickup location       (booking step 2)
-├── confirm_booking.php     Summary and payment             (booking step 3)
-├── thanks.php              Booking confirmation
-├── history.php             My bookings
-├── cancel_booking.php      Cancel a booking
-├── feedback.php            Send feedback
-│
-├── driver_login.php        Driver login
-├── driver_view.php         Driver trips and passenger list
-│
-├── admin_login.php         Administrator login
-├── dashboard.php           Administrator dashboard
-├── admin_view.php          All trips
-├── insert.php              Add a trip
-├── update.php              Edit a trip
-├── delete.php              Delete a trip
-├── admin_bookings.php      All bookings
-├── admin_feedback.php      User feedback
-├── admin_drivers.php       Manage drivers
-├── admin_admins.php        Manage administrators
-│
-├── includes/
-│   ├── config.php          Application settings
-│   ├── db.php              Database connection and query helpers
-│   ├── functions.php       Security, login checks, booking rules, formatting
-│   ├── header.php          Shared page header and menu
-│   ├── footer.php          Shared page footer
-│   ├── auth_side.php       Side panel of the login pages
-│   └── trip_form.php       Trip form used by insert and update
-│
-├── assets/
-│   ├── css/style.css       Stylesheet for all pages
-│   ├── js/app.js           Menu, confirmations and live price
-│   └── img/                Logo and icon
-│
-├── database/
-│   └── schema.sql          Tables and demo data
-│
-├── docs/
-│   ├── diagrams/           System design diagrams
-│   └── screenshots/        Screenshots
-│
-├── .vscode/                VS Code tasks and recommended extensions
-├── start.bat               Start script (Windows)
-└── start.sh                Start script (macOS / Linux)
+├── index.php, login.php, register.php, logout.php     Public pages
+├── welcome.php, view_trip.php, booking.php,
+│   confirm_booking.php, thanks.php, history.php,
+│   cancel_booking.php, feedback.php                    Student / staff pages
+├── driver_login.php, driver_view.php                   Driver pages
+├── admin_login.php, dashboard.php, admin_view.php,
+│   insert.php, update.php, delete.php,
+│   admin_bookings.php, admin_feedback.php,
+│   admin_drivers.php, admin_admins.php                 Administrator pages
+├── includes/      Shared code: settings, database, security, header and footer
+├── assets/        Stylesheet, JavaScript and images
+├── database/      Database tables and demo data (schema.sql)
+└── docs/          Diagrams and screenshots
 ```
 
 ---
 
-## 10. Database
+## Security
 
-UniBus uses **SQLite**. The database file `database/unibus.sqlite` is created automatically from
-`database/schema.sql` the first time the website is opened.
-
-| Table | Description |
-|---|---|
-| `users` | Students and staff (name, email, phone, hashed password) |
-| `admin` | Administrator accounts |
-| `drivers` | Drivers (name and phone number) |
-| `trips` | Trips: destination, date, time, bus number, driver, total and available seats |
-| `booking` | Bookings: user, trip, seats, pickup location, payment method, price, status |
-| `feedback` | Messages sent by users |
-
-**Relationships**
-- A user makes many bookings, and a trip has many bookings.
-- A driver drives many trips, and an administrator manages many trips.
-- A user writes many feedback messages.
-
-**Reset the database:** stop the server, delete `database/unibus.sqlite`, start the server again
-and refresh the page. A fresh copy with demo data is created.
-
-**View the data:** with the *SQLite Viewer* extension, click `database/unibus.sqlite` in VS Code.
-
-![Entity relationship diagram](docs/diagrams/erd.png)
+- **Encrypted passwords:** stored with bcrypt hashing, never as plain text
+- **Strong password rule:** at least 8 characters with uppercase, lowercase, a number and a special character
+- **Protection against SQL injection:** all database queries use prepared statements
+- **Protection against XSS:** all displayed data is escaped
+- **Protection against CSRF:** every form includes a secret security token
+- **Access control:** each page is only available to the correct role (student, driver or administrator)
+- **Safe booking:** seat updates run in a single database transaction
 
 ---
 
-## 11. Configuration
+## Future Work
 
-Settings are in `includes/config.php`:
-
-| Setting | Default | Description |
-|---|---|---|
-| `APP_NAME` | `UniBus` | Name shown in the browser tab |
-| `CONTACT_EMAIL` | `support@unibus.com` | Email shown in the footer |
-| `CAMPUS` | `UTAS - Suhar Campus` | Campus name |
-| `SEAT_PRICE` | `1.0` | Price of one seat (OMR) |
-| `MAX_SEATS_PER_BOOKING` | `5` | Maximum seats per booking |
-| `DEBUG` | `true` | Shows PHP errors; set to `false` in production |
-
-The time zone is set to `Asia/Muscat`.
+- Real-time GPS tracking of buses on a live map
+- SMS, email or push notifications for confirmations and delays
+- Integration with an online payment gateway
+- A mobile application for Android and iOS
+- Trip status updates by drivers (departed, delayed, completed)
+- Support for multiple campuses and route optimisation
 
 ---
 
-## 12. Security
-
-| Protection | How it is implemented |
-|---|---|
-| Password storage | Passwords are hashed with bcrypt (`password_hash` / `password_verify`) |
-| Strong passwords | At least 8 characters with uppercase, lowercase, a number and a special character |
-| SQL injection | All queries use PDO prepared statements |
-| Cross-site scripting (XSS) | All output is escaped before it is displayed |
-| Cross-site request forgery (CSRF) | Every form includes a secret token that is checked on submit |
-| Access control | Every page checks the role (student, driver or administrator) |
-| Sessions | Session ID is renewed at login; cookies are HTTP-only |
-| Data integrity | Booking and seat updates run in a single database transaction |
-
----
-
-## 13. System Design
-
-| Architecture | Use case diagram |
-|---|---|
-| ![Architecture](docs/diagrams/architecture.png) | ![Use case](docs/diagrams/use_case.png) |
-| **Context diagram** | **Data flow diagram (level 1)** |
-| ![Context](docs/diagrams/context.png) | ![DFD](docs/diagrams/dfd1.png) |
-
-<p align="center"><img src="docs/diagrams/flowchart.png" alt="Booking flowchart" width="420"></p>
-
----
-
-## 14. Screenshots
-
-| Available trips | Booking and payment |
-|---|---|
-| ![Trips](docs/screenshots/trips.jpg) | ![Confirm](docs/screenshots/confirm.jpg) |
-| **My bookings** | **Administrator dashboard** |
-| ![History](docs/screenshots/history.jpg) | ![Dashboard](docs/screenshots/dashboard.jpg) |
-| **Trips management** | **Driver – passenger list** |
-| ![Admin trips](docs/screenshots/admin_trips.jpg) | ![Driver](docs/screenshots/driver_view.jpg) |
-| **Drivers management** | **Administrators management** |
-| ![Drivers](docs/screenshots/drivers.jpg) | ![Admins](docs/screenshots/admins.jpg) |
-
-<p align="center"><img src="docs/screenshots/mobile_pair.jpg" alt="Mobile view" width="420"></p>
-
----
-
-## 15. Troubleshooting
-
-| Problem | Solution |
-|---|---|
-| `php is not recognized` | Close and reopen PowerShell / VS Code. If it still fails, restart the computer. |
-| *The PHP pdo_sqlite extension is not enabled* | Complete [Step 3](#step-3--enable-the-required-php-extensions-windows-only). |
-| `Call to undefined function mb_strlen()` | The `mbstring` extension is off. Complete [Step 3](#step-3--enable-the-required-php-extensions-windows-only). |
-| `Address already in use` | Port 8000 is busy. Run `php -S localhost:8080` and open http://localhost:8080. |
-| *Invalid form token* | Refresh the page and submit the form again. |
-| Demo data is outdated or broken | Reset the database (see [Database](#10-database)). |
-| Fonts look different | The Poppins font loads from the internet; without a connection a system font is used. |
-
----
-
-## 16. Team
+## Team
 
 **Software Engineer:** Jumana Albalushi
