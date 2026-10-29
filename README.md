@@ -203,7 +203,7 @@ More diagrams (context diagram, data flow diagram, booking flowchart and project
 ## Getting Started
 
 ### Required software
-- **PHP 8** or newer, with the `pdo_sqlite` and `mbstring` extensions
+- **PHP 8** or newer, with the `pdo_sqlite` extension
 - **Visual Studio Code**
 - A web browser (Chrome, Edge, Firefox or Safari)
 
@@ -230,22 +230,21 @@ brew install php
 
 **Linux (Ubuntu / Debian):**
 ```bash
-sudo apt install php-cli php-sqlite3 php-mbstring
+sudo apt install php-cli php-sqlite3
 ```
 
-### Step 3 – Enable the PHP extensions (Windows only)
+### Step 3 – Enable the SQLite extension (Windows only)
 Paste this into PowerShell and press Enter:
 ```powershell
 $dir = Split-Path (php -r "echo PHP_BINARY;")
 if (!(Test-Path "$dir\php.ini")) { Copy-Item "$dir\php.ini-development" "$dir\php.ini" }
 (Get-Content "$dir\php.ini") `
   -replace '^;?\s*extension_dir\s*=\s*"ext"', "extension_dir = `"$dir\ext`"" `
-  -replace '^;extension=pdo_sqlite', 'extension=pdo_sqlite' `
-  -replace '^;extension=mbstring', 'extension=mbstring' |
+  -replace '^;extension=pdo_sqlite', 'extension=pdo_sqlite' |
   Set-Content "$dir\php.ini"
-php -m | Select-String "pdo_sqlite|mbstring"
+php -m | Select-String "pdo_sqlite"
 ```
-The result must show **mbstring** and **pdo_sqlite**.
+The result must show **pdo_sqlite**.
 
 ### Step 4 – Open and run the project in VS Code
 1. Download or extract the **UniBus** project folder.

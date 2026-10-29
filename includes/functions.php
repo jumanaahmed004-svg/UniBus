@@ -6,6 +6,30 @@
 
 require_once __DIR__ . '/db.php';
 
+/* ------------------------------------------------------------------
+ * Fallbacks so UniBus also works when the PHP "mbstring" extension
+ * is not available (for example when Windows blocks it).
+ * ------------------------------------------------------------------ */
+if (!function_exists('mb_strlen')) {
+    function mb_strlen($s, $encoding = null): int
+    {
+        return (int) preg_match_all('/./us', (string) $s);
+    }
+}
+if (!function_exists('mb_substr')) {
+    function mb_substr($s, $start, $length = null, $encoding = null): string
+    {
+        preg_match_all('/./us', (string) $s, $m);
+        return implode('', array_slice($m[0], $start, $length));
+    }
+}
+if (!function_exists('mb_strtoupper')) {
+    function mb_strtoupper($s, $encoding = null): string
+    {
+        return strtoupper((string) $s);
+    }
+}
+
 if (session_status() === PHP_SESSION_NONE) {
     session_set_cookie_params(['httponly' => true, 'samesite' => 'Lax']);
     session_start();
